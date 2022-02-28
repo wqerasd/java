@@ -8,6 +8,10 @@ package Day01; // 패키지명 [ 소스파일들의 폴더 ]
 
 
 public class Day01_1 { // c s
+	
+	jh
+	kh
+	
    // public : 접근제한자
 	  // class : 클래스 선언
 	   // Day01_1 : 클래스 이름

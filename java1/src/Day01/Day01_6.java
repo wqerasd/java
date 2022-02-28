@@ -14,7 +14,7 @@ public class Day01_6 { //c s
 		
 		System.out.println("---------------방문록----------------");
 		System.out.println("| 순번 | 작성자 | 내용 | 날짜 |");
-		System.out.println(   순번 +"\t"+ 작성자 +"\t"+ 내용 +"\t" + 날짜);
+		System.out.println(순번 +"| \t |"+ 작성자 +"| \t |"+ 내용 +"| \t |" + 날짜);
 		System.out.println("------------------------------------");
 		
 		
