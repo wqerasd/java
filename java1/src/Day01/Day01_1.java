@@ -22,7 +22,7 @@ public class Day01_1 { // c s
 	public static void main(String[] args) { // main start
       // public : 접근제한자	
 		// static : 정적
-			// void : 반환타입[돌려주는 밗] 없다
+			// void : 반환타입[돌려주는 값] 없다
 				// main 함수 : 메인스레드를 가지고 있는 함수 [ 필수 ] 
 				// 스레드 : 코드를 읽어주는 흐름
 		
