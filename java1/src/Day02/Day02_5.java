@@ -132,12 +132,18 @@ public class Day02_5 {
 		
 				//문제15 : 나이를 입력받아 나이가 10세이상이면 학생 , 20세이상이면 성인 , 40세이상이면 중년 으로 출력하기
 				System.out.println(" 나이를 입력하세요 :");  	int 나이 = scanner.nextInt();
+				String 학생 = scanner.next(); 	
+				
 				
 				
 				
 				
 		
 				//문제16 : 3개의 정수를 입력받아 오름차순으로 정렬
+				System.out.println(" 정수 1 :"); 	int 정수1 = scanner.nextInt();
+				System.out.println(" 정수 2 :"); 	int 정수2 = scanner.nextInt();
+				System.out.println(" 정수 3 :");	 	int 정수3 = scanner.nextInt();
+				
 			
 				
 						
