@@ -64,6 +64,14 @@ public class 키오스크1 { // c s
 			 else if( 선택 == 4 ) {
 				 System.out.println(" ---------- 결제 제품목록 ---------- ");
 				 System.out.println(" 제품명\t수량\t금액");
+				 if( 콜라구매수 != 0 ) System.out.println(" 콜라\t" + 콜라구매수 + "\t" +(콜라구매수*300) );
+				 if( 환타구매수 != 0 ) System.out.println(" 환타\t" + 환타구매수 + "\t" +(환타구매수*200) );
+				 if( 사이다구매수 != 0 ) System.out.println(" 사이다\t" + 사이다구매수 + "\t" +(사이다구매수*100) );
+				 int 총결제액 = (콜라구매수*300) + (환타구매수*200) + (사이다구매수*100);
+				 System.out.println(" 제품 총 결제액 : "+ 총결제액);
+				 System.out.println("-----------------------------");
+				 System.out.println(" 1. 결제 2. 취소");
+				 
 			 }
 				 
 			 

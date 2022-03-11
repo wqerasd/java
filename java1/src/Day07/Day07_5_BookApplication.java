@@ -17,10 +17,9 @@ public class Day07_5_BookApplication { // c s
 					// 필드 : 번호,아이디,비밀번호,이름,연락처
 					// 메소드 : 1.회원가입 2.로그인 3.아이디찾기 4.비밀번호찾기
 			// 2. 화면 설계 
-				// 1. 초기 메뉴 [ 1.회원가입 , 2.로그인 , 3.아이디찾기 , 4.비밀번호찾기  ]
+				// 1. 초기 메뉴 [ 1.회원가입 , 2.로그인 , 3.아이디찾기 ,  4.비밀번호찾기  ]
 				// 2. 일반회원메뉴 [ 1.도서검색 2.도서목록 3.도서대여 4.도서반납 5.로그아웃 ]
 				// 3. 관리자메뉴  [ 1.도서등록 2.도서목록 3.도서삭제 4.순위(도전) 5.로그아웃
-		
 		
 		// * main 밖에 변수를 선언하는 이유 : 모든 메소드에서 사용하기 위해서 
 			// 지역변수  :  { 변수선언 } 괄호내에서 선언된 변수는 { } 밖을 못나감
@@ -73,9 +72,8 @@ public class Day07_5_BookApplication { // c s
 					}else{ // 일반 
 						// 1. 일반회원 메뉴 메소드 호출
 						System.out.println(" 알림]] 안녕하세요~ "+result+"님");
-						membermenu();
+						membermenu( result ); // 인수1개 [ 로그인 성공한 id ] 
 					}
-					
 				}
 				else if( ch ==3 ) {
 					member.아이디찾기();// 아이디 찾기 메소드 호출 
@@ -83,43 +81,46 @@ public class Day07_5_BookApplication { // c s
 				else if( ch ==4 ) {
 					member.비밀번호찾기(); // 비밀번호 찾기 메소드 소출 
 				}
-				else {
-					System.err.println(" 알림]] 알수 없는 번호입니다. ");
-				} 
+				else { System.err.println(" 알림]] 알수 없는 번호입니다. "); } 
 			}
 		} // menu end 
 		
 		// 2. 일반회원 메뉴 메소드
-		void membermenu() {
+		void membermenu( String loginid ) { // 인수 변수명은 달라도 되지만 자료형 동일 
 			while(true) {
-			System.out.println(" ---------- 회원 메뉴 ----------");
-			System.out.println(" 1. 도서검색 2. 도서목록 3. 도서대여 4. 도서반납 5. 로그아웃 선택 :");
-			int ch = scanner.nextInt();
-				Book book = new Book();  // 빈생성자로 객체 => 메소드 호출용
-			if( ch == 1) {
-				book.도서검색();
+				System.out.println(" --------------- 회원 메뉴 ------------------");
+				System.out.print("1.도서검색 2.도서목록 3.도서대여 4.도서반납 5.로그아웃 선택 : ");
+				int ch = scanner.nextInt();
+					Book book = new Book(); // 빈생성자로 객체 => 메소드 호출용
+				if( ch == 1 ) 		{ book.도서검색(); }
+				else if( ch ==2 ) 	{ book.도서목록(); }
+				else if( ch == 3 ) 	{ book.도서대여( loginid ); }
+				else if( ch == 4 ) 	{ book.도서반납( loginid ); }
+				else if( ch == 5 ) 	{ return; } // 일반회원메뉴 메소드 종료 [ 로그아웃 ] 
+				else { System.err.println(" 알림]] 알수 없는 번호입니다. "); }
 			}
-				
-			else if( ch == 2 ) { book.도서목록(); }										
-			else if( ch == 3 ) { book.도서대여(); }										
-			else if( ch == 4 ) { book.도서반납(); }														
-			else if( ch == 5 ) { return; }									
-			else { System.out.println(" 알림)) 알수 없는 번호입니다. "); }
-		}
-	}	
+		} // 일반회원 메뉴 종료 
 		// 3. 관리자 메뉴 메소드 
 		void adminmenu() {
-			System.out.println(" ---------- 회원 메뉴 ----------");
-			System.out.println(" 1. 도서등록 2. 도서목록 3. 도서삭제 4. 로그아웃 선택 :");
-			int ch = scanner.nextInt();
-				Book book = new Book();
-			if( ch == 1) { book.도서등록(); }				
-			else if( ch == 2 ) { book.도서목록(); }				
-			else if( ch == 3 ) { book.도서삭제(); }			
-			else if( ch == 4 ) { return; }			
-			else { System.out.println(" 알림]] 알수 없는 번호입니다. "); }
+			while(true) {
+				System.out.println(" --------------- 관리자 메뉴 ------------------");
+				System.out.print("1.도서등록 2.도서목록 3.도서삭제 4.로그아웃 선택 : ");
+				int ch = scanner.nextInt();
+					Book book = new Book();
+				if( ch == 1 ) 		{ book.도서등록(); }
+				else if( ch == 2 ) 	{ book.도서목록(); }
+				else if( ch == 3 ) 	{ book.도서삭제(); }
+				else if( ch == 4 ) 	{ return; }		// 관리자메뉴 메소드 종료 
+				else { System.err.println(" 알림]] 알수 없는 번호입니다. "); }
+			}
 		}
-				
+		
+		
 	} // class end 
+
+
+
+
+
 
 
