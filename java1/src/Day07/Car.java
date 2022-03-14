@@ -27,7 +27,7 @@ public class Car {
 		}
 		else {
 			System.out.println(" gas가 있습니다.");
-			return true;  //내부변수에 gas가 0이아님ㄴ true 반환
+			return true;  //내부변수에 gas가 0이아님 true 반환
 		}
 	}
 	// 3. gas가 0일때 까지 실행하는데 실행할때 마다 가스 1씩감수

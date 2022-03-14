@@ -10,6 +10,7 @@ public class 계좌 {
 	// 1. 필드
 		String 주민등록번호;
 		String 이름;
+		String 비밀번호;
 		
 	// 2. 생성자 
 		public 계좌() {}
@@ -22,6 +23,7 @@ public class 계좌 {
 	// 3. 메소드
 	boolean 계좌생성()  {
 		System.out.println(" ----- 계좌생성 페이지 ----- ");
+		System.out.println(" 비밀번호 ");	 	String 비밀번호 = Day08_5.scanner.next();
 		System.out.println(" 이름 :"); 		String 이름 = Day08_5.scanner.next();
 		System.out.println(" 주민등록번호 : ");	String 주민등록번호 = Day08_5.scanner.next();
 		
