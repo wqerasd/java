@@ -45,7 +45,7 @@ public class 은행컨트롤러 { // 클래스
 						i++; // 인덱스 증가
 					}
 					return null;  // null 이면 실패했다는 의미
-				}
+				} 
 	// 2. 입금 [ U ] 
 		public boolean 입금( String 계좌번호 , int 입금액) { 
 			// 1. 동일한 계좌번호를 찾아서 
