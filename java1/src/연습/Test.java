@@ -64,13 +64,18 @@ public class Test {
 				} // 학생 등록 
 					
 				else if( ch== 2 ) {  // 학생 삭제
-					System.out.println(" 삭제할 학생의 이름을 입력하세요 :");  String 이름 = scanner.next();
-					for( int i = 0; i<학생배열.length; i++ ) {
-						if( 학생배열[i ]!= null && 학생배열[i].get이름() == 이름)  {
+					System.out.println(" 삭제할 번호 입력 :");  int 번호 = scanner.nextInt();
+					
+					학생배열[번호-1] = null;
+					
+					for( int i = 번호-1; i<학생배열.length-1; i++) {
+						if( i == 학생배열.length-1 ) {
 							학생배열[i] = null;
+						}else {
+							학생배열[i]=학생배열[i+1];
 						}
 					}
-				}  
+				}
 				
 				else { 
 					System.out.println(" 알수없는 명령입니다. ");  
