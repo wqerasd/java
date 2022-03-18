@@ -1,10 +1,12 @@
 package Day12;
 
+import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Day12_1 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
 		// p.496  String 클래스 
 					// String 문자열 클래스 
